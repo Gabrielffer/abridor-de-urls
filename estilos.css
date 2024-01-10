@@ -1,0 +1,311 @@
+
+/*
+  / __|__ _| |__ _ _(_)___| |/ _|/ _|___ _ _ 
+ | (_ / _` | '_ \ '_| / -_) |  _|  _/ -_) '_|
+  \___\__,_|_.__/_| |_\___|_|_| |_| \___|_|  
+ github.com/Gabrielffer
+*/
+
+*{
+    margin  : 0;
+    padding : 0;
+}
+
+body{
+    color            : white;
+    padding-bottom   : 20px;
+    background-color : #212121;
+}
+
+#modal_confirmacao{
+    top              : 50%;
+    left             : 50%;
+    width            : 400px;
+    display          : none;
+    z-index          : 2;
+    position         : absolute;
+    transform        : translate(-50%, -50%);
+    box-shadow       : 2px 5px 10px black;
+    background-color : #212121;
+}
+
+#modal_confirmacao #modal_cabecalho{
+    color            : #fff;
+    padding          : 15px;
+    display          : flex;
+    align-items      : center;
+    justify-content  : space-between;
+    background-color : #263238;
+}
+
+#modal_confirmacao #modal_cabecalho #modal_titulo{
+    font-family : sans-serif;
+}
+
+#modal_confirmacao #modal_cabecalho #modal_fechar{
+    font-size  : 30px;
+    transition : transform 0.2s;
+}
+
+#modal_confirmacao #modal_cabecalho #modal_fechar:hover{
+    transform : rotate(90deg);
+}
+
+#modal_confirmacao #modal_cabecalho #modal_fechar, #modal_confirmacao #modal_rodape .bt_modal{
+    cursor : pointer;
+}
+
+#modal_confirmacao #modal_corpo{
+    padding : 30px;
+}
+
+#modal_confirmacao #modal_rodape{
+    padding         : 15px;
+    display         : flex;
+    justify-content : space-between;
+}
+
+#modal_confirmacao #modal_rodape .modal_bt{
+    border        : none;
+    padding       : 8px 14px;
+    border-radius : 5px;
+}
+
+#modal_confirmacao #modal_rodape #bt_afirmativo{
+    color            : #fff;
+    background-color : #4caf50;
+}
+
+#modal_confirmacao #modal_rodape #bt_afirmativo:hover{
+    background-color : #5fb962;
+}
+
+#modal_confirmacao #modal_rodape #bt_afirmativo:active{
+    background-color : #3e8e41;
+}
+
+#modal_confirmacao #modal_rodape #bt_negativo{
+    color            : #fff;
+    background-color : #f44336;
+}
+
+#modal_confirmacao #modal_rodape #bt_negativo:hover{
+    background-color : #f66055;
+}
+
+#modal_confirmacao #modal_rodape #bt_negativo:active{
+    background-color : #f21c0d;
+}
+
+#fundo_pagina header{
+    padding          : 8px;
+    font-family      : fantasy;
+    border-bottom    : solid 1px #E65100;
+    background-color : #263238;
+}
+
+#fundo_pagina noscript p{
+    color      : #f44336;
+    text-align : center;
+    margin-top : 20px;
+}
+
+#fundo_pagina #area_entrada_dados{
+    width  : 50%;
+    margin : 20px auto;
+}
+
+#fundo_pagina #area_entrada_dados span#area_total_enderecos{
+    float : right;
+}
+
+#fundo_pagina #area_entrada_dados span#area_total_enderecos span#ref_total_enderecos, #fundo_pagina footer a{
+    color : #26C6DA;
+}
+
+#fundo_pagina #area_entrada_dados span#area_total_enderecos span#res_total_enderecos{
+    color : #FFEB3B;
+}
+
+#fundo_pagina #area_entrada_dados textarea{
+    color            : white;
+    width            : 98%;
+    height           : 250px;
+    border           : solid 2px #263238;
+    padding          : 5px;
+    background-color : transparent;
+}
+
+#fundo_pagina #area_entrada_dados textarea:focus{
+    border-color : #E65100;
+}
+
+#fundo_pagina #area_entrada_dados label{
+    user-select : none;
+}
+
+#fundo_pagina #area_entrada_dados button#bt_copia{
+    float            : right;
+    color            : white;
+    width            : 15%;
+    height           : 25px;
+    border           : solid 1px #03A9F4;
+    background-color : #0D47A1;
+}
+
+#fundo_pagina #area_entrada_dados button#bt_copia:hover{
+    background-color : #283593;
+}
+
+#fundo_pagina #area_entrada_dados button#bt_abertura{
+    color            : white;
+    width            : 20%;
+    height           : 30px;
+    margin           : 40px auto;
+    border           : solid 1px #FF6F00;
+    display          : block;
+    background-color : #BF360C;
+}
+
+#fundo_pagina #area_entrada_dados button#bt_abertura:hover{
+    border-color : white;
+}
+
+#fundo_pagina #area_entrada_dados button#bt_abertura:active{
+    background-color : #D84315;
+}
+
+#fundo_pagina article{
+    width      : 50%;
+    margin     : 20px auto;
+    padding    : 20px;
+    border-top : solid 2px #E65100;
+}
+
+#fundo_pagina article h2{
+    margin-top : 10px;
+}
+
+#fundo_pagina article p{
+    margin-top : 20px;
+}
+
+#fundo_pagina article p span{
+    color : #F44336;
+}
+
+#fundo_pagina footer{
+    width            : 100%;
+    bottom           : 0;
+    padding          : 4px;
+    display          : flex;
+    position         : fixed;
+    border-top       : solid 1px #E65100;
+    text-align       : center;
+    justify-content  : space-between;
+    background-color : #212121;
+}
+
+#fundo_pagina footer a:hover{
+    color           : #FFEB3B;
+    text-decoration : none;
+}
+
+#fundo_pagina footer a:last-child{
+    margin-right : 10px;
+}
+
+button{
+    cursor : pointer;
+}
+
+button, textarea{
+    outline : none;
+}
+
+.alerta{
+    animation-name            : alerta;
+    animation-duration        : 2s;
+    animation-iteration-count : 1;
+}
+
+@keyframes alerta{
+
+    0%{
+        border-color : #B71C1C;
+    }
+
+    30%{
+        border-color : #C62828;
+    }
+
+    60%{
+        border-color : #D32F2F;
+    }
+
+    90%{
+        border-color : #E53935;
+    }
+
+    100%{
+        border-color : #EF5350;
+    }
+
+}
+
+@media only screen and (min-width : 319px) and (max-width : 426px){
+
+    #modal_confirmacao{
+        width : 250px;
+    }
+
+    #fundo_pagina #area_entrada_dados{
+        width : 90%;
+    }
+
+    #fundo_pagina #area_entrada_dados textarea{
+        width   : 99%;
+        padding : 0;
+    }
+
+    #fundo_pagina #area_entrada_dados button#bt_copia{
+        width : 20%;
+    }
+
+    #fundo_pagina #area_entrada_dados button#bt_abertura{
+        width      : 40%;
+        margin-top : 20px;
+    }
+
+    #fundo_pagina article{
+        width   : 90%;
+        padding : 0;
+    }
+
+    #fundo_pagina footer{
+        height         : auto;
+        position       : unset;
+        flex-direction : column;
+    }
+
+    #fundo_pagina footer p{
+        margin-top : 5px;
+    }
+
+    #fundo_pagina footer a:last-child{
+        margin-right : unset;
+    }
+
+}
+
+@media only screen and (width : 768px){
+
+    #fundo_pagina #area_entrada_dados textarea{
+        width : 96.4%;
+    }
+
+    #fundo_pagina #area_entrada_dados button#bt_copia{
+        width : 20%;
+    }
+
+}

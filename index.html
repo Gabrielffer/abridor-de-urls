@@ -1,0 +1,78 @@
+
+<!--
+   ___      _        _     _  __  __         
+  / __|__ _| |__ _ _(_)___| |/ _|/ _|___ _ _ 
+ | (_ / _` | '_ \ '_| / -_) |  _|  _/ -_) '_|
+  \___\__,_|_.__/_| |_\___|_|_| |_| \___|_|  
+ github.com/Gabrielffer
+-->
+
+<!DOCTYPE html>
+<html lang='pt-br'>
+
+    <head>
+
+        <title>Abridor de URLs</title>
+        <meta charset='UTF-8'>
+        <meta name='description' content='Abrir múltiplas URLs simultaneamente com um único apertar de botão.'>
+        <meta name='keywords' content='abridor, abrir, url, urls, link, links, pilha, massa, lista'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=yes'>
+        <link rel='icon' href='icone.png'>
+        <link rel='stylesheet' href='estilos.css'>
+
+    </head>
+
+    <body>
+
+        <div id='modal_confirmacao' data-funcao=''>
+            <div id= 'modal_cabecalho'>
+                <h2 id='modal_titulo'>Confirmação</h2>
+                <span id='modal_fechar' class='bt_fechamento'>&times;</span>
+            </div>
+            <div id='modal_corpo'>
+                <p id='modal_pergunta'></p>
+            </div>
+            <div id='modal_rodape'>
+                <button id='bt_afirmativo' class='modal_bt bt_fechamento'>Sim</button>
+                <button id='bt_negativo' class='modal_bt bt_fechamento'>Não</button>
+            </div>
+        </div>
+
+        <div id='fundo_pagina'>
+            <header>
+                <h1>Abridor de URLs</h1>
+            </header>
+            <noscript>
+                <p>É necessário ter o JavaScript ativado para usar este site.</p>
+            </noscript>
+            <div id='area_entrada_dados'>
+                <label for='enderecos'>URLs</label>
+                <span id='area_total_enderecos'>
+                    <span id='ref_total_enderecos'>Total de URLs: </span>
+                    <span id='res_total_enderecos'>0</span>
+                </span> <br>
+                <textarea id='enderecos' spellcheck='false' placeholder='Coloque suas URLs aqui.'></textarea>
+                <input type='checkbox' id='lembrar_enderecos'>
+                <label for='lembrar_enderecos'>Lembrar</label>
+                <button id='bt_copia'>Copiar</button>
+                <button id='bt_abertura'>Abrir</button>
+            </div>
+            <article>
+                <h2>Sobre</h2>
+                <p>Abra múltiplas  URLs simultaneamente com um único apertar de botão.</p>
+                <p>Você pode escolher salvar as URLs para uso posterior, se você desmarcar a opção todas as URLs serão deletadas. Todos os dados são armazenados diretamente no seu dispositivo.</p>
+                <p>As URLs devem ser separadas por quebra de linha.</p>
+                <p><span>(*)</span> Não se esqueça de permitir que pop-ups sejam abertos no seu navegador, caso contrário não será possível abrir uma ou mais URLs.</p>
+            </article>
+            <footer>
+                <p>Última atualização: 20/12/2023</p>
+                <p>Desenvolvido por <a href='https://github.com/Gabrielffer' target='_blank'>Gabrielffer</a></p>
+                <p>Icone de <a href='https://icon-icons.com/' target='_blank'>Icon-icons</a></p>
+            </footer>
+        </div>
+
+        <script src='funcionalidades.js'></script>
+
+    </body>
+
+</html>
